@@ -1,0 +1,14 @@
+apply {
+    plugin 'java-library'
+    plugin 'war'
+}
+
+// Gradleがアプリケーション依存ファイルを取得する際に参照するリポジトリ
+repositories {
+    jcenter()
+}
+
+// 依存ファイルを記述: アプリケーションに足りないライブラリはこちらに追記
+dependencies {
+    implementation 'org.apache.tomcat:tomcat-catalina:9.0.7'
+}
